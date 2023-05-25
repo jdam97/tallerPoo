@@ -8,9 +8,9 @@ class Persona {
         this.sexo = sexo
     }
     saludar() {
-        return `<h2>Hola soy ${this.nombre}</h2>`
+        return `Hola soy ${this.nombre}`
     }
-    static esMayorDeEdad(edad){
+    static esMayorDeEdad(edad){ 
         if (edad>=18){
             return `mayor de edad: ${true}`
         }
@@ -19,7 +19,6 @@ class Persona {
     get getEdad(){
         return this.edad
     }
-
 }
 
 class Estudiante extends Persona{
@@ -29,7 +28,7 @@ class Estudiante extends Persona{
     }
 
     estudiar(){
-        return `<h2>Estoy estudiando ${this.carrera}</h2>`
+        return `Estoy estudiando ${this.carrera}`
     }
 }
 
@@ -38,10 +37,9 @@ form.addEventListener('submit',(e) => {
     let data = Object.fromEntries(new FormData(e.target))
     let persona1 = new Persona(data)
     let estudiante1 = new Estudiante(data)
-    saludar.innerHTML = `${persona1.saludar()}
-    ${estudiante1.saludar()} ${estudiante1.estudiar()}
-    ${Persona.esMayorDeEdad(persona1.getEdad)}`
-    
+    saludar.innerHTML = `<div>${persona1.saludar()}</div>
+    <div>${estudiante1.saludar()} </div>${estudiante1.estudiar()}</div>
+    <div>${Persona.esMayorDeEdad(persona1.getEdad)}</div>`
     form.reset()
 })
 
