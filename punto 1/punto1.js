@@ -1,5 +1,5 @@
 let form = document.querySelector('#form')
-let saludar = document.querySelector('.saludar')
+let saludar = document.querySelector('#saludar')
 
 class Persona {
     constructor({nombre, edad, sexo}) {
@@ -38,8 +38,10 @@ form.addEventListener('submit',(e) => {
     let persona1 = new Persona(data)
     let estudiante1 = new Estudiante(data)
     saludar.innerHTML = `<div>${persona1.saludar()}</div>
-    <div>${estudiante1.saludar()} </div>${estudiante1.estudiar()}</div>
+    <div>${estudiante1.saludar()} </div>
+    <div>${estudiante1.estudiar()}</div>
     <div>${Persona.esMayorDeEdad(persona1.getEdad)}</div>`
+    saludar.classList.add('saludar')
     form.reset()
 })
 
