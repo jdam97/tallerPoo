@@ -44,7 +44,7 @@ form.addEventListener('submit',(e)=>{
     div.textContent = `Área: ${figura1.calcularArea()} 
     Área circulo: ${circulo1.calcularArea()}
     Área rectangulo: ${rectangulo1.calcularArea()}`
-
+    
 })
 
 
