@@ -2,7 +2,7 @@ let form = document.querySelector('#form')
 let div = document.querySelector('#mostrar')
 
 class Empleado{
-    static id = 0
+    static id = 1
     constructor({nombre,edad,sueldo}){
         this.nombre = nombre
         this.edad = edad
